@@ -5,22 +5,23 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const links = [
-    { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
+    { href: "/", label: "About" },
+    { href: "/Skill", label: "Skills" },
+    { href: "/Project", label: "Projects" },
     { href: "#contact", label: "Contact" },
   ];
 
   const [isOpen, setIsOpen] = React.useState(false);
-
+  const pathname = usePathname();
   return (
     <>
       {/* Header */}
-      <header className="flex items-center justify-between py-6 bg-neutral-50 dark:bg-neutral-800 rounded-lg px-4">
-        <h1 className="font-mono text-4xl text-primary hidden md:block">
+      <header className="flex items-center justify-between py-6 bg-neutral-50 dark:bg-neutral-800 rounded-lg px-4 font-mono">
+        <h1 className="text-4xl text-primary hidden md:block">
           Rifki Dev Portfolio
         </h1>
 
@@ -57,7 +58,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-primary font-semibold text-lg"
+              className={`${link.href === pathname && "text-blue-600"} text-lg font-medium capitalize text-primary transition-all duration-200 hover:text-secondary`}
             >
               {link.label}
             </Link>

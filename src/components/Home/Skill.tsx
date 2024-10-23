@@ -10,7 +10,7 @@ import {
 
 export default function SKill (){
     return(    
-    <section id="skills" className="mt-24 w-full">
+    <section id="skills" className="mt-24 w-full ">
         <h2 className="text-3xl font-bold text-center mb-12">Skills & Technologies</h2>
 
         {/* Skill Categories */}

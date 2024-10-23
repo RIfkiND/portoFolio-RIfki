@@ -1,10 +1,10 @@
 "use client";
 
 import Header from "@/components/Header/Header";
-import Skill from "@/components/Home/Skill";
+// import Skill from "@/components/Home/Skill";
 import About from "@/components/Home/About";
 import Footer from "@/components/Footer/Footer";
-import Contact from "@/components/Home/Contact";
+// import Contact from "@/components/Home/Contact";
 
 export default function Home() {
   return (
@@ -14,9 +14,9 @@ export default function Home() {
         {/* About Section */}
         <About />
         {/* Skills Section */}
-        <Skill />
+        {/* <Skill /> */}
         {/* Contact Section */}
-        <Contact />
+        {/* <Contact /> */}
       </main>
       {/* Footer */}
       <Footer />

@@ -19,6 +19,24 @@ html, body {
   width: 100vw; /* Use viewport width */
   overflow-x: hidden; /* Ensure no overflow */
 }
+.typing-cursor {
+  display: inline-block;
+  width: 1px;
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 
 
