@@ -58,7 +58,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`${link.href === pathname && "text-blue-600"} text-lg font-medium capitalize text-primary transition-all duration-200 hover:text-secondary`}
+              className={`${link.href === pathname && "text-blue-600"} text-lg font-semibold capitalize text-primary transition-all duration-200 hover:text-blue-600`}
             >
               {link.label}
             </Link>
