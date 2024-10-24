@@ -8,7 +8,7 @@ import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
-    <div id="webcrumbs" className="p-6 font-mono overflow-x-hidden">
+    <div id="webcrumbs" className="p-6  overflow-x-hidden">
       <Header />
       <main className="flex flex-col space-y-8">
         {/* About Section */}

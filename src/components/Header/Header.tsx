@@ -12,7 +12,7 @@ export default function Header() {
     { href: "/", label: "About" },
     { href: "/Skill", label: "Skills" },
     { href: "/Project", label: "Projects" },
-    { href: "#contact", label: "Contact" },
+    { href: "/contact", label: "Contact" },
   ];
 
   const [isOpen, setIsOpen] = React.useState(false);
@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <>
       {/* Header */}
-      <header className="flex items-center justify-between py-6 bg-neutral-50 dark:bg-neutral-800 rounded-lg px-4 font-mono">
+      <header className="flex items-center justify-between py-6 bg-neutral-50 dark:bg-neutral-800 rounded-lg px-4 ">
         <h1 className="text-4xl text-primary hidden md:block">
           Rifki Dev Portfolio
         </h1>
