@@ -12,7 +12,6 @@ export default function Header() {
     { href: "/", label: "About" },
     { href: "/Skill", label: "Skills" },
     { href: "/Project", label: "Projects" },
-    { href: "/contact", label: "Contact" },
   ];
 
   const [isOpen, setIsOpen] = React.useState(false);
@@ -20,9 +19,9 @@ export default function Header() {
   return (
     <>
       {/* Header */}
-      <header className="flex items-center justify-between py-6 bg-neutral-50 dark:bg-neutral-800 rounded-lg px-4 ">
-        <h1 className="text-4xl text-primary hidden md:block">
-          Rifki Dev Portfolio
+      <header className="flex items-center justify-between py-6   dark:bg-neutral-800 md:rounded-full rounded-none border-2 border-black px-4 ">
+        <h1 className="text-4xl font-dancing  text-primary hidden md:block">
+          Rifki 
         </h1>
 
         {/* Dropdown Menu for Mobile */}
@@ -43,7 +42,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-4 py-2 text-primary font-semibold hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded"
+                className="block px-4 py-2 text-primary font-semibold hover:bg-neutral-200   dark:hover:bg-neutral-700 "
                 onClick={() => setIsOpen(false)} // Close the menu on click
               >
                 {link.label}

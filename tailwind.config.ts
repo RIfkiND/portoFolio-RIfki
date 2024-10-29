@@ -9,9 +9,10 @@ const config: Config = {
   ],
   theme: {
   	extend: {
-		fontFamily:{
-			poppins: ['Poppins', 'sans-serif'],
-		},
+  		fontFamily: {
+  			poppins: ['Poppins', 'sans-serif'],
+  			dancing: ['Dancing Script', 'cursive']
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -68,6 +69,14 @@ const config: Config = {
   					height: 'var(--radix-accordion-content-height)'
   				}
   			},
+  			bounce: {
+  				'0%': {
+  					transform: 'translateY(0)'
+  				},
+  				'100%': {
+  					transform: 'translateY(-15px)'
+  				}
+  			},
   			'accordion-up': {
   				from: {
   					height: 'var(--radix-accordion-content-height)'
@@ -79,7 +88,8 @@ const config: Config = {
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+  			bounce: 'bounce 0.6s infinite alternate'
   		}
   	}
   },

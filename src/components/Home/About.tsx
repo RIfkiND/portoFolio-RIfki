@@ -56,7 +56,7 @@ export default function About() {
             See My Work
           </button>
           <a href="/path/to/your/resume.pdf" download>
-            <button className="bg-gray-300 text-black py-3 px-6 rounded-md font-bold text-lg hover:bg-gray-400">
+            <button className="bg-blue-600 text-white  py-3 px-6 rounded-md font-bold text-lg hover:bg-gray-400">
               Download Resume
             </button>
           </a>
@@ -66,7 +66,7 @@ export default function About() {
       <div className="w-full p-4 pl-0 md:pl-40 md:w-2/5 relative mt-8 md:mt-0">
         <Image
           src="https://tools-api.webcrumbs.org/image-placeholder/500/500/person/1"
-          alt="Developer"
+          alt="Developer" 
           width={400}
           height={400}
           className="rounded-full object-cover"
