@@ -17,8 +17,8 @@ export default function About() {
           setDisplayedText((prev) => prev + text.charAt(index));
           setIndex((prevIndex) => prevIndex + 1);
         }, typingSpeed);
-        
-        return () => clearTimeout(timeoutId); 
+
+        return () => clearTimeout(timeoutId);
       }
     }, [index, text]);
 
@@ -26,8 +26,12 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="flex flex-wrap mt-16 justify-between items-center w-full">
-      <div className="w-full p-4 md:w-3/5 relative">
+    <section
+      id="about"
+      className="flex flex-col md:flex-row items-start justify-between gap-8 mt-16"
+    >
+      {/* Left Section: Text */}
+      <div className="w-full md:w-3/5 p-4 relative">
         <h2 className="text-4xl leading-[50px] font-bold mb-4">
           <TypingEffect text="Hi, I am a Backend Developer and a Tech Enthusiast" />
           <Image
@@ -37,10 +41,13 @@ export default function About() {
             height={30}
             className="inline h-[30px] ml-2"
           />
-          <span className="typing-cursor">|</span> {/* Optional cursor */}
+          <span className="typing-cursor">|</span>
         </h2>
         <p className="text-lg mb-6">
-          Welcome to my portfolio! I specialize in creating amazing and functional web experiences with JavaScript, React, and Node.js. I focus on building scalable web applications and enjoy writing clean, efficient code.
+          Welcome to my portfolio! I specialize in creating amazing and
+          functional web experiences with JavaScript, React, and Node.js. I
+          focus on building scalable web applications and enjoy writing clean,
+          efficient code.
         </p>
 
         {/* Quote Section */}
@@ -56,22 +63,50 @@ export default function About() {
             See My Work
           </button>
           <a href="/path/to/your/resume.pdf" download>
-            <button className="bg-blue-600 text-white  py-3 px-6 rounded-md font-bold text-lg hover:bg-gray-400">
+            <button className="bg-blue-600 text-white py-3 px-6 rounded-md font-bold text-lg hover:bg-gray-400">
               Download Resume
             </button>
           </a>
         </div>
+
+        {/* Stats Section */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold mb-8 text-center">
+            Personal Stats & Achievements
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <StatItem title="Years of Experience" value="3+ Years" />
+            <StatItem title="Technologies Used" value="15+" />
+            <StatItem title="Code Commits" value="5000+" />
+            <StatItem title="Projects Completed" value="25+" />
+          </div>
+        </div>
       </div>
 
-      <div className="w-full p-4 pl-0 md:pl-40 md:w-2/5 relative mt-8 md:mt-0">
+      {/* Right Section: Image */}
+      <div className="w-full md:w-2/5 flex justify-center md:justify-end">
         <Image
           src="https://tools-api.webcrumbs.org/image-placeholder/500/500/person/1"
-          alt="Developer" 
+          alt="Developer"
           width={400}
           height={400}
           className="rounded-full object-cover"
         />
       </div>
     </section>
+  );
+}
+
+interface StatItemProps {
+  title: string;
+  value: string;
+}
+
+function StatItem({ title, value }: StatItemProps) {
+  return (
+    <div className="p-6 bg-white dark:bg-neutral-700 rounded-lg shadow-lg">
+      <h4 className="text-xl font-bold mb-2">{title}</h4>
+      <p className="text-lg font-semibold text-primary">{value}</p>
+    </div>
   );
 }

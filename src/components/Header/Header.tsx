@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <>
       {/* Header */}
-      <header className="flex items-center justify-between py-6   dark:bg-neutral-800 md:rounded-full rounded-none border-2 border-black px-4 ">
+      <header className="flex items-center justify-between py-6    md:rounded-full rounded-none  px-4 ">
         <h1 className="text-4xl font-dancing  text-primary hidden md:block">
           Rifki 
         </h1>

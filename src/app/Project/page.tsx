@@ -6,7 +6,6 @@ import {
   Card,
   CardContent,
   CardFooter,
-  CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 
@@ -47,12 +46,12 @@ export default function Projects() {
             key={project.title}
             className="w-full border border-black rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl animate-fadeIn"
           >
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className="block h-full">
-              <CardHeader className="bg-gray-800 text-white">
-                <CardTitle className="text-lg font-semibold">
-                  {project.title}
-                </CardTitle>
-              </CardHeader>
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block h-full"
+            >
               <CardContent className="flex flex-col items-center">
                 <div className="relative w-full h-48">
                   <Image
@@ -65,7 +64,11 @@ export default function Projects() {
                 </div>
                 <hr className="my-4 w-full border-t border-black" />
               </CardContent>
+
               <CardFooter className="flex flex-col items-start p-4">
+                <CardTitle className="text-lg font-semibold mb-2">
+                  {project.title}
+                </CardTitle>
                 <div className="flex flex-wrap">
                   {project.tags.map((tag, index) => (
                     <span
