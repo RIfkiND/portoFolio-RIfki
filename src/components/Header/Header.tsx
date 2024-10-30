@@ -20,7 +20,7 @@ export default function Header() {
     <>
       {/* Header */}
       <header className="flex items-center justify-between py-6    md:rounded-full rounded-none  px-4 ">
-        <h1 className="text-4xl font-dancing  text-primary hidden md:block">
+        <h1 className="text-4xl font-bold font-poppins text-primary hidden md:block">
           Rifki 
         </h1>
 
