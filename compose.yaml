@@ -12,11 +12,11 @@ services:
     build:
       context: .
     environment:
-      - RESEND_API_KEY=re_SbH6Uoeh_JxwcwzRW9cH75aX3RkGQx5uM
-      - MY_EMAIL=rifkinauvaldzaki08@gmail.com
-      # - NODE_ENV=production
+      - RESEND_API_KEY=${RESEND_API_KEY}  # Use the variable from the .env file
+      - MY_EMAIL=${MY_EMAIL}  # Use the variable from the .env file
+      - NODE_ENV=production  # Uncomment if needed
     ports:
-      - "3010:3010"
+      - "3010:3010"  # Map the container port to your host
 
 
 # The commented out section below is an example of how to define a PostgreSQL
