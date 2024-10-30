@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'  # Match this to your Docker node version
+          node-version: '20.8.0'  # Match this to your Docker node version
 
       - name: Install dependencies
         run: |
