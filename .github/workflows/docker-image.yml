@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag rifkinauvaldzaki/portofolio-rifki:latest || true
+        run: docker build . --file Dockerfile --tag rifkinauvaldzaki/portofolio-rifki:latest
 
       - name: Debugging Information
         run: |
