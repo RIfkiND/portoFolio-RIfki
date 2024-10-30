@@ -22,6 +22,9 @@ FROM deps as build
 # Copy all source code.
 COPY . .
 
+ARG RESEND_API_KEY
+
+
 # Build the Next.js app.
 RUN npm run build
 

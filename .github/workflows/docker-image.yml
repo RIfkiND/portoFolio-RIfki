@@ -27,7 +27,7 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           MY_EMAIL: ${{ secrets.MY_EMAIL }}
         run: |
-          docker build  -t rifkinauvaldzaki/portofolio-rifki:latest .
+          docker build --build-arg RESEND_API_KEY=${{ secrets.RESEND_API_KEY }} -t rifkinauvaldzaki/portofolio-rifki:latest .
           
       - name: Push Docker image
         run: |
