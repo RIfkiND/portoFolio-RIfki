@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
+import Vscode from "@/components/Home/DeveloperProfile";
 export default function About() {
   interface TypingEffectProps {
     text: string;
@@ -84,15 +84,8 @@ export default function About() {
       </div>
 
       {/* Right Section: Image */}
-      <div className="w-full md:w-2/5 flex justify-center md:justify-end">
-        <Image
-          src="https://tools-api.webcrumbs.org/image-placeholder/500/500/person/1"
-          alt="Developer"
-          width={400}
-          height={400}
-          className="rounded-full object-cover"
-        />
-      </div>
+      
+      <Vscode/>
     </section>
   );
 }
