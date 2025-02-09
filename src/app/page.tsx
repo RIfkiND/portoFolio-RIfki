@@ -1,6 +1,5 @@
 "use client";
 
-import Header from "@/components/Header/Header";
 // import Skill from "@/components/Home/Skill";
 import About from "@/components/Home/About";
 import Footer from "@/components/Footer/Footer";
@@ -9,8 +8,7 @@ import Footer from "@/components/Footer/Footer";
 export default function Home() {
   return (
     <div id="webcrumbs" className="p-6  overflow-x-hidden">
-      <Header />
-      <main className="flex flex-col space-y-8">
+      <main className="flex flex-col space-y-8 bg-white dark:bg-black">
         {/* About Section */}
         <About />
         {/* Skills Section */}
@@ -19,7 +17,6 @@ export default function Home() {
         {/* <Contact /> */}
       </main>
       {/* Footer */}
-      <Footer />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import {
   
 export default function Footer()  { 
     return(
-        <footer className="mt-16 bg-neutral-50 dark:bg-neutral-800 py-6 px-4 rounded-lg w-full">
+        <footer className="mt-16 bottom-0 bg-neutral-50 dark:bg-neutral-800 py-6 px-4 rounded-lg w-full">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-600 dark:text-gray-300 mb-4 md:mb-0">
             © {new Date().getFullYear()} All rights reserved.

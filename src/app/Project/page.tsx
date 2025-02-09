@@ -84,7 +84,6 @@ export default function Projects() {
           </Card>
         ))}
       </div>
-      <Footer />
-    </div>
+          </div>
   );
 }

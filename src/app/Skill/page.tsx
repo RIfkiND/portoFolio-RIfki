@@ -7,7 +7,6 @@ export default function SkillPage(){
         <div className="p-6 overflow-x-hidden">
             <Header/>
             <Skill/>
-            <Footer/>
         </div>
     )
 }
