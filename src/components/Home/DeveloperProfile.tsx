@@ -16,7 +16,6 @@ export default function DeveloperProfile() {
   const [activeTab, setActiveTab] = useState("experience");
   useEffect(() => {
     if (typeof window !== "undefined") {
-      require("prismjs/plugins/line-numbers/prism-line-numbers");
       Prism.highlightAll();
   
       document.querySelectorAll("pre.line-numbers").forEach((pre) => {
