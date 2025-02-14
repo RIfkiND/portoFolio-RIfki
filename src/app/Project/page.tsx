@@ -1,6 +1,5 @@
 "use client";
-import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header/Header";
+
 import Image from "next/image";
 import {
   Card,
@@ -39,7 +38,6 @@ const projects = [
 export default function Projects() {
   return (
     <div className="p-6">
-      <Header />
       <div className="grid mt-20 grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {projects.map((project) => (
           <Card

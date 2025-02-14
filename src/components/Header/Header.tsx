@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ModeToggle } from "@/components/theme/ModeToggle"; // Import the toggle
+// import { ModeToggle } from "@/components/theme/ModeToggle"; // Import the toggle
 import {
   Collapsible,
   CollapsibleContent,
@@ -59,9 +59,9 @@ export default function Header() {
             </Link>
           ))}
           {/* Theme Toggle Inside Mobile Menu */}
-          <div className="px-4 py-2">
+          {/* <div className="px-4 py-2">
             <ModeToggle />
-          </div>
+          </div> */}
         </CollapsibleContent>
       </Collapsible>
 
@@ -79,7 +79,7 @@ export default function Header() {
           </Link>
         ))}
         {/* Theme Toggle for Desktop */}
-        <ModeToggle />
+        {/* <ModeToggle /> */}
       </nav>
     </header>
   );

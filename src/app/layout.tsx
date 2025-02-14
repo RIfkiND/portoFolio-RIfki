@@ -16,25 +16,33 @@ const poppins = Poppins({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
-  const [mounted, setMounted] = useState(false); // Ensures client & server match
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000);
-    setMounted(true); // Only allow rendering after mount
-    return () => clearTimeout(timer);
+    const timer = setTimeout(() => {
+      setLoading(false);
+      document.body.style.overflow = ""; 
+    }, 3000);
+    
+    setMounted(true);
+    document.body.style.overflow = "hidden"; 
+
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = ""; 
+    };
   }, []);
 
-  if (!mounted) return null; // Prevent mismatches by rendering only on mount
-
+  if (!mounted) return null; 
   return (
     <html lang="en" className={poppins.variable}>
-      <body className="antialiased font-poppins flex flex-col min-h-screen">
+      <body className={`antialiased font-poppins flex flex-col min-h-screen ${loading ? "overflow-hidden" : "overflow-auto"}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {loading ? <Loading /> : (
             <>
-                  <Header />
-              <div className="flex-grow">{children}</div>
-              <Footer />
+          <Header />
+              <main className="flex-1 overflow-auto flex-grow">{children}</main>
+              <Footer /> 
             </>
           )}
         </ThemeProvider>
